@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Offline - No Internet</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", "Roboto", sans-serif;
+            background: linear-gradient(160deg, #141e30, #243b55);
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 420px;
+            padding: 20px;
+            border-radius: 16px;
+            backdrop-filter: blur(6px);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        .icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        button {
+            background: #ff2d20;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #e6281c;
+            transform: scale(1.05);
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="icon">📡</div>
+        <h1>You’re Offline</h1>
+        <p>Looks like you lost your internet connection.
+            Don’t worry, you can retry once you’re back online.</p>
+        <button onclick="location.reload()">🔄 Try Again</button>
+    </div>
+</body>
+
+</html>

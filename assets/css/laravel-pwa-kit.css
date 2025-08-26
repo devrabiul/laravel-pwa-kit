@@ -1,0 +1,184 @@
+:root {
+    --pwa-kit-bg: #ffffff;
+    --pwa-kit-color: #1a1a1a;
+    --pwa-kit-border-radius: 0.75rem;
+    --pwa-kit-shadow: 0 0px 10px rgba(0, 0, 0, 0.15);
+    --pwa-kit-accent: #ffb400;
+    --pwa-kit-close-color: #555;
+    --pwa-kit-close-hover: #ff2d20;
+}
+
+body[theme="dark"] {
+    --pwa-kit-bg: #1f1f28;
+    --pwa-kit-color: #f1f1f1;
+    --pwa-kit-shadow: 0 4px 8px rgba(0, 0, 0, 0.3),
+    0 8px 16px rgba(0, 0, 0, 0.4),
+    0 16px 32px rgba(0, 0, 0, 0.5);
+    --pwa-kit-close-color: #aaa;
+}
+
+.app-install-toast {
+    position: fixed;
+    top: 1rem;
+    z-index: 9999999;
+    align-items: center;
+    max-width: 360px;
+    background: var(--pwa-kit-bg);
+    color: var(--pwa-kit-color);
+    border-radius: var(--pwa-kit-border-radius);
+    box-shadow: var(--pwa-kit-shadow);
+    overflow: hidden;
+    display: none;
+    transform: translateX(110%);
+    transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+    inset-inline-end: 1rem;
+}
+
+@media (max-width: 600px) {
+    .app-install-toast {
+        inset-inline: 1rem;
+        max-width: 100%;
+        width: auto;
+        border-radius: 0.5rem;
+    }
+
+    .app-install-toast.small-device-bottom {
+        top: auto;
+        bottom: 1rem;
+    }
+}
+
+.app-install-toast.toast-slide-in {
+    transform: translateX(0);
+}
+
+.app-install-toast.toast-slide-out {
+    transform: translateX(110%);
+}
+
+[dir="rtl"] .app-install-toast {
+    transform: translateX(-110%);
+}
+
+[dir="rtl"] .app-install-toast.toast-slide-in {
+    transform: translateX(0);
+}
+
+[dir="rtl"] .app-install-toast.toast-slide-out {
+    transform: translateX(-110%);
+}
+
+.app-install-toast-content {
+    display: flex;
+    align-items: center;
+    padding: 1.25rem;
+    word-wrap: break-word;
+}
+
+.app-install-toast-text .app-install-toast-title {
+    margin: 0 0 0.75rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--pwa-kit-color);
+}
+
+.app-install-toast-text .app-install-toast-desc {
+    font-size: 0.875rem;
+    color: var(--pwa-kit-color);
+    opacity: 0.85;
+    display: block;
+    margin-bottom: .75rem;
+}
+
+#installPWAButton {
+    background: linear-gradient(45deg, #0ea5e9, #246bdc);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.6rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+#installPWAButton::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+#installPWAButton:hover::after {
+    transform: scaleX(1);
+}
+
+#installPWAButton:hover {
+    background: linear-gradient(45deg, #1e90ff, #3b82f6);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+#installPWAButton:active {
+    transform: scale(0.97);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+body[theme="dark"] #installPWAButton {
+    background: linear-gradient(45deg, #0ea5e9, #3b82f6);
+    color: #fff;
+}
+
+body[theme="dark"] #installPWAButton:hover {
+    background: linear-gradient(45deg, #3b82f6, #3b82f6);
+}
+
+.app-install-toast-btn-close {
+    position: absolute;
+    top: 10px;
+    inset-inline-end: 10px;
+    width: 26px;
+    height: 26px;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.app-install-toast-btn-close::before,
+.app-install-toast-btn-close::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 2px;
+    background-color: var(--pwa-kit-close-color);
+    transform-origin: center;
+    transition: background-color 0.2s ease;
+}
+
+.app-install-toast-btn-close::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.app-install-toast-btn-close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.app-install-toast-btn-close:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.app-install-toast-btn-close:hover::before,
+.app-install-toast-btn-close:hover::after {
+    background-color: var(--pwa-kit-close-hover);
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Advance eCommerce",
+    "short_name": "Advance eCommerce",
+    "start_url": "/",
+    "scope": "/",
+    "author": "Rabiul Islam",
+    "version": "1.0",
+    "description": "A description of your web app.",
+    "orientation": "portrait",
+    "dir": "auto",
+    "lang": "en",
+    "display": "standalone",
+    "themeColor": " #FF5733",
+    "theme_color": " #FF5733",
+    "backgroundColor": "#ffffff",
+    "background_color": " #FF5733",
+    "icons": [
+        {
+            "src": "logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

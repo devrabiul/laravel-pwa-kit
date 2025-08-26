@@ -1,0 +1,47 @@
+{
+    "name": "devrabiul/laravel-pwa-kit",
+    "type": "library",
+    "description": "Laravel PWA Kit is a lightweight and flexible package to add Progressive Web App (PWA) support to your Laravel applications with ease.",
+    "keywords": [
+        "laravel",
+        "pwa",
+        "progressive-web-app",
+        "laravel-pwa",
+        "service-worker",
+        "offline",
+        "manifest",
+        "pwa-kit",
+        "web-app",
+        "php"
+    ],
+    "homepage": "https://github.com/devrabiul/laravel-pwa-kit",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Muhammad Rabiul",
+            "email": "devrabiul@gmail.com",
+            "homepage": "https://rixetbd.com",
+            "role": "Software Engineer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Devrabiul\\PwaKit\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Devrabiul\\PwaKit\\PwaKitServiceProvider"
+            ],
+            "aliases": {
+                "PwaKit": "Devrabiul\\PwaKit\\Facades\\PwaKit"
+            }
+        }
+    },
+    "require": {
+        "php": ">=8.0"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
