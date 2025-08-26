@@ -11,8 +11,7 @@
         "offline",
         "manifest",
         "pwa-kit",
-        "web-app",
-        "php"
+        "web-app"
     ],
     "homepage": "https://github.com/devrabiul/laravel-pwa-kit",
     "license": "MIT",
