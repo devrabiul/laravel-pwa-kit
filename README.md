@@ -135,6 +135,27 @@ return [
 
 ---
 
+## 📲 Multiple Forced Install Buttons
+
+You can add multiple buttons anywhere in your app to **force the PWA install prompt**. Use the `.force-install-pwa-app` class on any button and attach the install trigger:
+
+```html
+<!-- Example Buttons -->
+<button class="force-install-pwa-app">Install App</button>
+<button class="force-install-pwa-app">Add to Home Screen</button>
+```
+
+```javascript
+// Trigger install prompt for multiple buttons
+document.querySelectorAll(".force-install-pwa-app").forEach((btn) => {
+    btn.onclick = triggerPWAInstall;
+});
+```
+
+> 💡 **Tip:** `triggerPWAInstall` is the helper function provided by Laravel PWA Kit that opens the browser’s add-to-home-screen prompt. You can place as many buttons as you want in your UI.
+
+---
+
 ### Livewire Support
 
 Enable in `config/laravel-pwa-kit.php`:
