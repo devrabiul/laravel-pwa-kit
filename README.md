@@ -4,8 +4,10 @@
 
 [![Latest Stable Version](https://poser.pugx.org/devrabiul/laravel-pwa-kit/v/stable)](https://packagist.org/packages/devrabiul/laravel-pwa-kit)
 [![Total Downloads](https://poser.pugx.org/devrabiul/laravel-pwa-kit/downloads)](https://packagist.org/packages/devrabiul/laravel-pwa-kit)
+[![Monthly Downloads](https://poser.pugx.org/devrabiul/laravel-pwa-kit/d/monthly)](https://packagist.org/packages/devrabiul/laravel-pwa-kit)
 ![GitHub license](https://img.shields.io/github/license/devrabiul/laravel-pwa-kit)
 [![Buy us a tree](https://img.shields.io/badge/Treeware-%F0%9F%8C%B3-lightgreen)](https://plant.treeware.earth/devrabiul/laravel-pwa-kit)
+![GitHub Repo stars](https://img.shields.io/github/stars/devrabiul/laravel-pwa-kit?style=social)
 
 ---
 
