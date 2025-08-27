@@ -209,7 +209,9 @@ Registers the service worker, required scripts, and displays the install toast.
 
 ### 3. `PwaKit::updatePWALogo(Request $request)`
 
-Handles logo upload, validates dimensions and type, and stores the logo in **public** & **base** directories.
+Handles **logo upload**, validates **file type** (PNG), enforces **minimum dimensions** (512×512), and stores the logo in both the **public** and **base** directories.
+
+* The uploaded file must be sent with the key **`logo`** (`$request['logo']`).
 
 ```php
 use Illuminate\Http\Request;
@@ -217,6 +219,7 @@ use Devrabiul\PwaKit\Facades\PwaKit;
 
 public function updateLogo(Request $request)
 {
+    // $request['logo'] contains the uploaded file
     $result = PwaKit::updatePWALogo($request);
 
     if ($result['status']) {
