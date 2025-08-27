@@ -80,6 +80,11 @@ class PwaKit
      */
     public function updatePWALogo(Request $request): array
     {
-        return self::updatePWALogo($request);
+        return self::updatePWALogoFile($request);
+    }
+
+    public function createOrUpdate(array $manifest, bool $force = false): bool
+    {
+        return self::createOrUpdateData($manifest, $force);
     }
 }

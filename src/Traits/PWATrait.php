@@ -197,7 +197,7 @@ trait PWATrait
      * @param bool $force Overwrite if file exists
      * @return bool
      */
-    public function createOrUpdate(array $manifest, bool $force = false): bool
+    public function createOrUpdateData(array $manifest, bool $force = false): bool
     {
         // Ensure defaults
         $startUrl = $manifest['start_url'] ?? '/';

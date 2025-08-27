@@ -234,39 +234,37 @@ public function updateLogo(Request $request)
 Programmatically creates or updates the `manifest.json` file.
 
 ```php
-use Devrabiul\PwaKit\PwaKit;
-
-$pwa = new PwaKit();
+use Devrabiul\PwaKit\Facades\PwaKit;
 
 $manifest = [
-    'name' => 'My Awesome PWA',
-    'short_name' => 'AwesomePWA',
+    'appName' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Laravel'),
+    'shortName' => env('APP_NAME', 'Laravel'),
+    'short_name' => env('APP_NAME', 'Laravel'),
+    'startUrl' => '/',
     'start_url' => '/',
+    'scope' => '/',
+    'author' => 'Rabiul Islam',
+    'version' => '1.0',
+    'description' => 'A description of your web app.',
+    'orientation' => 'portrait',
+    'dir' => 'auto',
+    'lang' => 'en',
     'display' => 'standalone',
-    'background_color' => '#ffffff',
-    'theme_color' => '#ff5733',
+    'themeColor' => '#FF5733',
+    'theme_color' => '#FF5733',
+    'backgroundColor' => '#ffffff',
+    'background_color' => '#FF5733',
+    'icons' => [
+        [
+            'src' => 'logo.png',
+            'sizes' => '512x512',
+            'type' => 'image/png',
+        ]
+    ],
 ];
 
-$pwa->createOrUpdate($manifest, true); // true = force overwrite
-```
-
----
-
-### 5. `update(array $manifestData)`
-
-Safely updates manifest data without overwriting other existing keys.
-
-```php
-use Devrabiul\PwaKit\PwaKit;
-
-$pwa = new PwaKit();
-
-$updatedManifest = [
-    'theme_color' => '#00aaff',
-    'background_color' => '#f0f0f0',
-];
-
-$pwa->update($updatedManifest);
+PwaKit::createOrUpdate($manifest, true); // true = force overwrite
 ```
 
 ---
