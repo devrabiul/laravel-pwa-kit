@@ -213,7 +213,6 @@ trait PWATrait
         // Encode JSON
         $jsonData = json_encode($finalManifest, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
         if ($jsonData === false) {
-            logger()->error('Failed to encode manifest to JSON.', ['manifest' => $finalManifest]);
             return false;
         }
 
@@ -227,12 +226,10 @@ trait PWATrait
             $dir = dirname($filePath);
 
             if (!is_writable($dir)) {
-                logger()->error("Directory is not writable: $dir");
                 return false;
             }
 
             if (file_exists($filePath) && !$force) {
-                logger()->warning("Manifest already exists at $filePath. Use --force to overwrite.");
                 continue; // skip this one, try next
             }
 
@@ -241,11 +238,7 @@ trait PWATrait
                 $tmpPath = $filePath . '.tmp';
                 file_put_contents($tmpPath, $jsonData);
                 rename($tmpPath, $filePath);
-                logger()->info("Manifest written to $filePath");
             } catch (\Throwable $e) {
-                logger()->error("Failed to write manifest.json at $filePath", [
-                    'error' => $e->getMessage(),
-                ]);
                 return false;
             }
         }

@@ -83,6 +83,18 @@ class PwaKit
         return self::updatePWALogoFile($request);
     }
 
+    /**
+     * Create or update the manifest.json file using provided manifest data.
+     *
+     * This method delegates the actual writing process to createOrUpdateData(),
+     * ensuring the manifest file is generated or updated based on the given
+     * configuration.
+     *
+     * @param array $manifest Associative array representing manifest.json content.
+     * @param bool  $force    If true, overwrite existing manifest.json files.
+     *
+     * @return bool True on success, false on failure.
+     */
     public function createOrUpdate(array $manifest, bool $force = false): bool
     {
         return self::createOrUpdateData($manifest, $force);
