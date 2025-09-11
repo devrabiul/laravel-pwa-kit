@@ -112,7 +112,7 @@ class AssetsServiceProvider extends ServiceProvider
      * - Retrieves the current installed package version.
      * - Retrieves the previously published version from the public directory.
      * - If versions differ (or no published version exists), deletes the existing asset folder.
-     * - Copies the new assets from the package's `assets` directory to the public packages folder.
+     * - Copies the new assets from the package's `assets` directory to the public packages' folder.
      * - Writes/updates the version.php file in the public folder with the current version.
      *
      * This ensures the public assets are always in sync with the installed package version.

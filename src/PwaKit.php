@@ -3,6 +3,7 @@
 namespace Devrabiul\PwaKit;
 
 use Devrabiul\PwaKit\Traits\PWATrait;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\Config\Repository;
 use Illuminate\Session\SessionManager as Session;
@@ -77,6 +78,7 @@ class PwaKit
      *
      * @param Request $request The HTTP request containing the uploaded logo file.
      * @return array Status, paths, or error messages.
+     * @throws Exception
      */
     public function updatePWALogo(Request $request): array
     {

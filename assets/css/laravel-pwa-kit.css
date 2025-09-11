@@ -1,7 +1,7 @@
 :root {
     --pwa-kit-bg: #ffffff;
     --pwa-kit-color: #1a1a1a;
-    --pwa-kit-border-radius: 0.75rem;
+    --pwa-kit-border-radius: 0.35rem;
     --pwa-kit-shadow: 0 0px 10px rgba(0, 0, 0, 0.15);
     --pwa-kit-accent: #ffb400;
     --pwa-kit-close-color: #555;
@@ -71,19 +71,19 @@ body[theme="dark"] {
 .app-install-toast-content {
     display: flex;
     align-items: center;
-    padding: 1.25rem;
+    padding: 1rem;
     word-wrap: break-word;
 }
 
 .app-install-toast-text .app-install-toast-title {
-    margin: 0 0 0.75rem 0;
-    font-size: 1rem;
+    margin: 0 0 0.25rem 0;
+    font-size: .95rem;
     font-weight: 600;
     color: var(--pwa-kit-color);
 }
 
 .app-install-toast-text .app-install-toast-desc {
-    font-size: 0.875rem;
+    font-size: 0.85rem;
     color: var(--pwa-kit-color);
     opacity: 0.85;
     display: block;
@@ -95,13 +95,14 @@ body[theme="dark"] {
     color: #fff;
     font-weight: 600;
     border: none;
-    border-radius: 0.6rem;
-    padding: 0.5rem 1rem;
+    border-radius: 0.35rem;
+    padding: 0.5rem .75rem;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     position: relative;
     overflow: hidden;
+    font-size: .75rem;
 }
 
 #installPWAButton::after {
