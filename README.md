@@ -25,6 +25,14 @@
 
 ---
 
+## 🚀 Live Demo
+
+👉 [Try the Live Demo](https://packages.rixetbd.com/devrabiul/laravel-pwa-kit)
+
+![Live Demo Thumbnail](https://packages.rixetbd.com/storage/app/public/package/devrabiul/laravel-pwa-kit.webp)
+
+---
+
 ## 🖼️ Screenshots / Demo
 
 See **Laravel PWA Kit** in action:
